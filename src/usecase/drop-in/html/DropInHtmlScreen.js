@@ -5,52 +5,8 @@ import {handleSuccess} from "../../../common/Utils";
 
 export default function DropInHtmlScreen({navigation}) {
     const sourceUri = (
-        Platform.OS === 'android'
-            ? 'file:///android_asset/'
-            : ''
+        Platform.OS === 'android' ? 'file:///android_asset/': ''
     );
-    // const PlatformUri: () => Node = Platform.select({
-    //     android: () => 'file:///android_asset/',
-    //     default: () => '',
-    // });
-    // const PlatformWebview: () => Node = Platform.select({
-    //     android: () => (
-    //         <WebView
-    //             originWhitelist={['*']}
-    //             source={{ uri: 'file:///android_asset/DropInHtml.html' }}
-    //             style={{marginTop: 1}}
-    //             javaScriptEnabled={true}
-    //             domStorageEnabled={true}
-    //             startInLoadingState={true}
-    //             onNavigationStateChange={handleWebViewNavigationStateChange}
-    //             injectedJavaScript={addAddonsToSubscription()}
-    //         />
-    //     ),
-    //     default: () => (
-    //         <WebView
-    //             originWhitelist={['*']}
-    //             source={HomePage}
-    //             style={{marginTop: 1}}
-    //             javaScriptEnabled={true}
-    //             domStorageEnabled={true}
-    //             startInLoadingState={true}
-    //             onNavigationStateChange={handleWebViewNavigationStateChange}
-    //             injectedJavaScript={addAddonsToSubscription()}
-    //         />
-    //     ),
-    // });
-
-    // const handleWebViewNavigationStateChange = (newNavState) => {
-    //     if (newNavState && newNavState.url.includes('thankyou')) {
-    //         navigation.dispatch(
-    //             StackActions.replace('Success')
-    //         );
-    //     }
-    // }
-
-    console.log('message');
-    console.log(sourceUri + 'Web.bundle/site/index.html');
-    console.log('---------');
 
     return (<WebView
         originWhitelist={['*']}
