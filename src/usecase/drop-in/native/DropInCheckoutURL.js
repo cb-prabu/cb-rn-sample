@@ -2,9 +2,7 @@ import * as React from 'react';
 import {SafeAreaView, ScrollView, StyleSheet, View} from 'react-native';
 import {Button, Card, Headline, Paragraph, Subheading, Text, Title} from 'react-native-paper';
 import {useState} from "react";
-import {Asset} from "expo-asset";
 
-const logoUri = Asset.fromModule(require('../../../assets/comic-book.png')).uri;
 const planWithAddonsAndBasicUserDetails = 'https://honeycomics-v3-test.chargebee.com/hosted_pages/plans/comics-box?' +
     'coupon_ids[0]=cbdemo_earlybird&addons[id][0]=extra-comic-book&addons[quantity][0]=2' +
     '&customer[email]=vivek@chargebee.com&customer[cf_test]=customer%20custom%20field' +
@@ -38,7 +36,7 @@ export default function DropInCheckoutURL({navigation}) {
                     </Headline>
                     <Text>{"\n"}</Text>
                     <Card>
-                        <Card.Cover source={{uri: logoUri}}/>
+                        <Card.Cover source={require('../../../../assets/comic-book.png')}/>
                         <Card.Actions style={{justifyContent: 'center', alignItems: 'center'}}>
                             <Button mode="contained" color="#02daaf" onPress={() => subscribePlan(comicPlan)}>
                                 Subscribe

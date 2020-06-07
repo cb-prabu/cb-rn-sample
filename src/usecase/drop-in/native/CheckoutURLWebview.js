@@ -1,20 +1,13 @@
 import * as React from 'react';
 import WebView from "react-native-webview";
-import {StackActions} from "@react-navigation/native";
+import {handleSuccess} from "../../../common/Utils";
 
 export default function CheckoutURLWebview({navigation, route}) {
     let webview;
-    const handleWebViewNavigationStateChange = (newNavState) => {
-        if (newNavState && newNavState.url.includes('thankyou')) {
-            navigation.dispatch(
-                StackActions.replace('Thankyou')
-            );
-        }
-    }
 
     return (
         <WebView
-            onNavigationStateChange={handleWebViewNavigationStateChange}
+            onNavigationStateChange={(navigationState) => handleSuccess(navigation, navigationState)}
             ref={ref => (webview = ref)}
             originWhitelist={['*']}
             source={{uri: route.params.planUrl}}

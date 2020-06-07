@@ -8,6 +8,8 @@ import {createStackNavigator} from "@react-navigation/stack";
 import DropInHtmlScreen from "../usecase/drop-in/html/DropInHtmlScreen";
 import Success from "../components/Success";
 import Home from "../components/Home";
+import DropInCheckoutURL from "../usecase/drop-in/native/DropInCheckoutURL";
+import CheckoutURLWebview from "../usecase/drop-in/native/CheckoutURLWebview";
 
 const Stack = createStackNavigator();
 
@@ -29,16 +31,16 @@ export default function AppNavigator() {
                     component={DropInHtmlScreen}
                     options={{title: "Honey Comics"}}
                 />
-                {/*<Stack.Screen*/}
-                {/*    name="DropInCheckoutURL"*/}
-                {/*    component={DropInCheckoutURL}*/}
-                {/*    options={{title: "Honey Comics"}}*/}
-                {/*/>*/}
-                {/*<Stack.Screen*/}
-                {/*    name="CheckoutURLWebview"*/}
-                {/*    component={CheckoutURLWebview}*/}
-                {/*    options={{title: "Honey Comics"}}*/}
-                {/*/>*/}
+                <Stack.Screen
+                    name="DropInCheckoutURL"
+                    component={DropInCheckoutURL}
+                    options={{title: "Honey Comics Subscription"}}
+                />
+                <Stack.Screen
+                    name="CheckoutURLWebview"
+                    component={CheckoutURLWebview}
+                    options={{title: "Honey Comics"}}
+                />
                 {/*<Stack.Screen*/}
                 {/*    name="ApiCheckout"*/}
                 {/*    component={ApiCheckout}*/}
