@@ -54,7 +54,7 @@ export default function DropInHtmlScreen({navigation}) {
 
     return (<WebView
         originWhitelist={['*']}
-        source={{ uri: sourceUri + 'Web.bundle/site/index.html' }}
+        source={{ uri: sourceUri + 'web.bundle/site/index.html' }}
         style={{marginTop: 1}}
         javaScriptEnabled={true}
         domStorageEnabled={true}

@@ -20,6 +20,7 @@
 		63EAADEDA166D41B315C5E86 /* libPods-CBReactNativeSample-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB85DEC12D7F3F74318DE455 /* libPods-CBReactNativeSample-tvOS.a */; };
 		67511F7379DAC82329D7461D /* libPods-CBReactNativeSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3DD251E7855DDD902EBD90 /* libPods-CBReactNativeSample.a */; };
 		7E5AF476A9D509189218F5E9 /* libPods-CBReactNativeSample-CBReactNativeSampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 994835B0311D9B750E8A0307 /* libPods-CBReactNativeSample-CBReactNativeSampleTests.a */; };
+		FA9D33FB248D48020017EF1B /* web.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FA9D33FA248D48020017EF1B /* web.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		EE7B02644FBDA44951CE60D1 /* Pods-CBReactNativeSample-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CBReactNativeSample-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-CBReactNativeSample-tvOSTests/Pods-CBReactNativeSample-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F6FBEEA817805C19EB57BE9D /* Pods-CBReactNativeSample-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CBReactNativeSample-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-CBReactNativeSample-tvOSTests/Pods-CBReactNativeSample-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		FA9D33FA248D48020017EF1B /* web.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = web.bundle; path = ../vendor/web.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		13B07FAE1A68108700A75B9A /* CBReactNativeSample */ = {
 			isa = PBXGroup;
 			children = (
+				FA9D33FA248D48020017EF1B /* web.bundle */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -194,7 +197,6 @@
 				EE7B02644FBDA44951CE60D1 /* Pods-CBReactNativeSample-tvOSTests.debug.xcconfig */,
 				F6FBEEA817805C19EB57BE9D /* Pods-CBReactNativeSample-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -340,6 +342,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				FA9D33FB248D48020017EF1B /* web.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
