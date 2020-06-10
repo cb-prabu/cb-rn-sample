@@ -19,7 +19,7 @@ body{
     margin:0;
 }
 .navbar-header .h1{
-    background: url(https://www.recur.in/drop-in/assets/images/logo.png)no-repeat;
+    background: url(../images/logo.png)no-repeat;
     width: 285px;
     height:70px;
     float: left;
