@@ -5,11 +5,13 @@ import * as React from 'react';
 // or any pure javascript modules available in npm
 import {NavigationContainer} from "@react-navigation/native";
 import {createStackNavigator} from "@react-navigation/stack";
-import DropInHtmlScreen from "../usecase/drop-in/html/DropInHtmlScreen";
+import DropInHtmlScreen from "../usecase/drop-in-html-checkout/DropInHtmlScreen";
 import Success from "../components/Success";
 import Home from "../components/Home";
-import DropInCheckoutURL from "../usecase/drop-in/native/DropInCheckoutURL";
-import CheckoutURLWebview from "../usecase/drop-in/native/CheckoutURLWebview";
+import DropInCheckoutURL from "../usecase/drop-in-native-checkout/DropInCheckoutURL";
+import CheckoutURLWebview from "../usecase/drop-in-native-checkout/CheckoutURLWebview";
+import UserInformation from "../usecase/api-native-product/UserInformation";
+import ApiCheckout from "../usecase/api-native-product/ApiCheckout";
 
 const Stack = createStackNavigator();
 
@@ -41,31 +43,16 @@ export default function AppNavigator() {
                     component={CheckoutURLWebview}
                     options={{title: "Honey Comics"}}
                 />
-                {/*<Stack.Screen*/}
-                {/*    name="ApiCheckout"*/}
-                {/*    component={ApiCheckout}*/}
-                {/*    options={{title: "Honey Comics"}}*/}
-                {/*/>*/}
-                {/*<Stack.Screen*/}
-                {/*    name="UserInformation"*/}
-                {/*    component={UserInformation}*/}
-                {/*    options={{title: "Tell us about yourself"}}*/}
-                {/*/>*/}
-                {/*<Stack.Screen*/}
-                {/*    name="ComponentsBasic"*/}
-                {/*    component={ComponentsBasic}*/}
-                {/*    options={{title: "Checkout"}}*/}
-                {/*/>*/}
-                {/*<Stack.Screen*/}
-                {/*    name="ComponentsProgrammaticActions"*/}
-                {/*    component={ComponentsWithProgrammaticActions}*/}
-                {/*    options={{title: "Checkout"}}*/}
-                {/*/>*/}
-                {/*<Stack.Screen*/}
-                {/*    name="ComponentsEventListeners"*/}
-                {/*    component={ComponentsWithEventListeners}*/}
-                {/*    options={{title: "Checkout"}}*/}
-                {/*/>*/}
+                <Stack.Screen
+                    name="UserInformation"
+                    component={UserInformation}
+                    options={{title: "Tell us about yourself"}}
+                />
+                <Stack.Screen
+                    name="ApiCheckout"
+                    component={ApiCheckout}
+                    options={{title: "Honey Comics"}}
+                />
             </Stack.Navigator>
         </NavigationContainer>
     );

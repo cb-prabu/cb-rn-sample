@@ -18,7 +18,7 @@ export default function DropInCheckoutURL({navigation}) {
     return (
         <SafeAreaView>
             <ScrollView>
-                <View>
+                <View style={{marginHorizontal: 20}}>
                     <Headline style={styles.titleText}>Honey Comics</Headline>
                     <Headline>
                         <Text style={{textAlign: 'center'}}>
@@ -36,7 +36,7 @@ export default function DropInCheckoutURL({navigation}) {
                     </Headline>
                     <Text>{"\n"}</Text>
                     <Card>
-                        <Card.Cover source={require('../../../../assets/comic-book.png')}/>
+                        <Card.Cover source={require('../../../assets/comic-book.png')}/>
                         <Card.Actions style={{justifyContent: 'center', alignItems: 'center'}}>
                             <Button mode="contained" color="#02daaf" onPress={() => subscribePlan(comicPlan)}>
                                 Subscribe
